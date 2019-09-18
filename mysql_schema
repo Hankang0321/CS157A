@@ -1,0 +1,38 @@
+//Creating database name 'cs157a'
+
+CREATE DATABASE cs157a;
+
+//Creating table name 'student' in the database 'cs157a'
+
+CREATE TABLE student (
+    ID INT(10) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    Name VARCHAR(30) NOT NULL,
+    Age INT(10) UNSIGNED)
+);
+
+
+
+//Descirbe student
++-------+------------------+------+-----+---------+----------------+
+| Field | Type             | Null | Key | Default | Extra          |
++-------+------------------+------+-----+---------+----------------+
+| ID    | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| Name  | varchar(30)      | NO   |     | NULL    |                |
+| Age   | int(10) unsigned | NO   |     | NULL    |                |
++-------+------------------+------+-----+---------+----------------+
+
+//Insert some data into table 'student'
+
+INSERT INTO student (Name, Age) values ('Han', '21');
+
+// Data in student table
+
+mysql> SELECT * FROM student;
++----+----------+------+
+| ID | Name     | Age  |
++----+----------+------+
+|  1 | Han      |   21 |
+|  2 | Vivian   |   21 |
+|  3 | Martin   |   20 |
+|  4 | Gandalff | 4953 |
++----+----------+------+
