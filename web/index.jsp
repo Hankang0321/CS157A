@@ -17,7 +17,7 @@
     try {
         java.sql.Connection con;
         Class.forName("com.mysql.jdbc.Driver");
-        con = DriverManager.getConnection("jdbc:mysql://localhost:3306/cs157a?serverTimezone=EST5EDT", "root", "djawnlsk1");
+        con = DriverManager.getConnection("jdbc:mysql://localhost:3306/cs157a?serverTimezone=EST5EDT", "root", "password");
         out.println("<br/>CS157A" + " database successfully opened.<br/><br/>");
         Statement s = con.createStatement();
         ResultSet rs = s.executeQuery("SELECT * FROM student");
